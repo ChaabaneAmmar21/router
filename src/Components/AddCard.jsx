@@ -28,6 +28,7 @@ export default function NestedModal(props) {
   const [rating, setRating] = React.useState(0);
   const [title, settitle] = React.useState("");
   const [posterURL, setPosterURL] = React.useState("");
+  const [trailer, settrailer] = React.useState("");
   const [ description, setdescription] = React.useState("");
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
@@ -106,6 +107,15 @@ export default function NestedModal(props) {
                     setPosterURL(e.target.value);
                   }}
                 />
+                 <Form.Control
+                  required
+                  type="html"
+                  placeholder="Enter Url"
+                  value={trailer}
+                  onChange={(e) => {
+                    settrailer(e.target.value);
+                  }}
+                />
               </Form.Group>
               <Form.Group>
                 <Box
@@ -128,7 +138,7 @@ export default function NestedModal(props) {
                 style={{ width: "100%" }}
                 className="primary"
                 onClick={() =>
-                  props.Addfilm({ title, description, posterURL, rating },handleClose)
+                  props.Addfilm({ title, description, posterURL, rating,trailer },handleClose)
                 }
               >
                 Add film

@@ -11,6 +11,8 @@ const ProductDetails = ({data}) => {
      <h1> {pd.title} </h1>
       <img src={pd.posterURL} height="360px" alt=""/>
      <h4> {pd.description}</h4>
+     <div> <iframe width="560" height="315" src={pd.trailer} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ </div>
      <Link to="/"><h1 style={{color:"red",fontStyle:"italic"}}>go to list produt</h1></Link>
 
       
